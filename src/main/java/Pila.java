@@ -12,6 +12,6 @@ public class Pila {
 
     public String toVisualString() {
         List<Nodo> list = new ArrayList<>(stack);
-        return "PILA(TOP->BOTTOM) " + list;
+        return "PILA(ARRIBA->ABAJO) " + list;
     }
 }

@@ -79,7 +79,7 @@ public class Main {
             System.out.println("==============================");
 
         } catch (Exception e) {
-            System.out.println("❌ Error al cargar el grafo:");
+            System.out.println("Error al cargar el grafo:");
             System.out.println(e.getMessage());
         }
     }

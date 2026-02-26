@@ -11,6 +11,6 @@ public class ColaSimple {
 
     public String toVisualString() {
         List<Nodo> list = new ArrayList<>(queue);
-        return "COLA(FRONT->BACK) " + list;
+        return "COLA(FRENTE->DETRAS) " + list;
     }
 }
