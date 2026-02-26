@@ -23,8 +23,8 @@ public class DFS {
             System.out.println("\n================ DFS - ITERACIÓN " + iter + " ================");
             // RÚBRICA: al inicio del while se vean LAS 2 ESTRUCTURAS
             System.out.println(pila.toVisualString());
-            System.out.println("DESCUBIERTOS " + new ArrayList<>(descubiertos));
-
+           // System.out.println("DESCUBIERTOS " + new ArrayList<>(descubiertos));
+            System.out.println(mostrarDescubiertosOrdenados(descubiertos));
             // 4.1) Sacar un nodo de la pila (visitamos el nodo)
             Nodo actual = pila.pop();
             System.out.println("VISITANDO: " + actual);
@@ -60,5 +60,10 @@ public class DFS {
 
         System.out.println("OBJETIVO NO ENCONTRADO: " + objetivo);
         return false;
+    }
+    private static String mostrarDescubiertosOrdenados(java.util.Set<Nodo> set) {
+        java.util.List<Nodo> lista = new java.util.ArrayList<>(set);
+        lista.sort(java.util.Comparator.comparing(Nodo::getId));
+        return "DESCUBIERTOS(ABC) " + lista;
     }
 }

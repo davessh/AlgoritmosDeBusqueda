@@ -48,14 +48,13 @@ public class Main {
             Nodo nodoInicio = new Nodo(inicio);
             Nodo nodoObjetivo = new Nodo(objetivo);
 
-            System.out.println("\n====================================");
             System.out.println("Cargando grafo...");
             System.out.println("Archivo: " + rutaCSV);
             System.out.println("Tipo: " + (undirected ? "NO DIRIGIDO" : "DIRIGIDO"));
             System.out.println("Inicio: " + inicio);
             System.out.println("Objetivo: " + objetivo);
             System.out.println("Modo: " + modo.toUpperCase());
-            System.out.println("====================================\n");
+
 
             Grafo g = ManejadorArchivos.cargarDesdeCSV(rutaCSV, undirected);
 
@@ -70,13 +69,11 @@ public class Main {
                 return;
             }
 
-            System.out.println("\n==============================");
             if (encontrado) {
                 System.out.println("RESULTADO: OBJETIVO ENCONTRADO");
             } else {
                 System.out.println("RESULTADO: OBJETIVO NO ENCONTRADO");
             }
-            System.out.println("==============================");
 
         } catch (Exception e) {
             System.out.println("Error al cargar el grafo:");
